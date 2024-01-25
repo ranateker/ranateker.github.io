@@ -1,0 +1,122 @@
+/* 
+- niveaukeuze pop up
+    - achtergrond is wazig
+    - beginner button
+    - intermediate button
+    - expert button
+- bord wordt gegenereerd
+    - een grid van vierkantjes gebasseerd op niveaukeuze
+    - velden met bommen geegnereerd, die krijgen een hidden bom
+        - wordt displayed als end game
+    - velden krijgen hidden aantal bomburen 
+        - wordt displayed als op geklikt of end game.
+- inhoud veld wordt displayed als op geklikt wordt
+- velden krijgen flaggetje als rechtermuisknop 
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  max-height: 500px;
+  background-color: #7dadc4;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5vh;
+}
+
+.minesweeper {
+  padding: 15vw;
+  padding-top: 0;
+  padding-bottom: 0;
+  align-self: center;
+}
+
+.level {
+  align-content: center;
+  width: 70vw;
+}
+
+.btn {
+  background-color: rgb(255, 255, 255, 0.3);
+  justify-content: center;
+  align-content: center;
+  margin: 1vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 2vh;
+  width: 15vw;
+  height: 4vh;
+}
+
+.active {
+  background-color: rgb(255, 255, 255, 0.6);
+}
+
+#remaining-flags-icon {
+  height: 3vh;
+}
+
+.info {
+  display: inline-block;
+  flex-direction: row;
+  text-align: left;
+  font-size: 2vh;
+}
+
+.flag-icon {
+  z-index: 2;
+  position: relative;
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+}
+
+#game-result {
+  text-align: center;
+  font-size: 3vh;
+  margin: 0;
+}
+
+#board {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.cell {
+  width: 5vw;
+  height: 5vw;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0.1vw;
+  border-radius: 0.2vw;
+  display: table-cell;
+}
+
+.mine-icon {
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+}
+.wrong-flag-icon {
+  height: 90%;
+  align-self: center;
+  object-fit: contain;
+}
+
+.red {
+  color: rgb(199, 40, 40);
+}
+
+.hidden {
+  z-index: 1;
+  position: relative;
+  color: rgba(255, 255, 255, 0);
+  border: 1vw;
+  background-color: rgba(255, 255, 255, 0.5);
+}
